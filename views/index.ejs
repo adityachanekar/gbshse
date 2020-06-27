@@ -1,60 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HSSC Results</title>
     <style>
-        body{
-            font-family:sans-serif;
+        body {
+            font-family: sans-serif;
         }
-        h2, h3,h4{
+
+        h2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        h2,
+        h3,
+        h4 {
             text-align: center;
             margin-bottom: 25px;
         }
-        form{
+
+        form {
             text-align: center;
         }
+        
     </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <h2>Goa Board HSSC Results</h2>
-    <h3>Search by name, centre and stream and get the roll no.</h3>
-    <h3>Enter firstname OR lastname</h3>
-    <div>
-        <form id="demo" method="GET" action="/search" enctype="application/x-www-form-urlencoded">
-            <input type="text" name="query" placeholder="Name">
-            <select name="centre" id="">
-                <option value="" disabled selected>Centre</option>
-                <option value="bicholim">Bicholim</option>
-                <option value="canacona">Canacona</option>
-                <option value="cuncolim">Cuncolim</option>
-                <option value="curchorem">Curchorem</option>
-                <option value="mapusa">Mapusa</option>
-                <option value="margao">Margao</option>
-                <option value="panaji">Panaji</option>
-                <option value="harmal">Harmal</option>
-                <option value="pernem">Pernem</option>
-                <option value="pilar">Pilar</option>
-                <option value="ponda">Ponda</option>
-                <option value="sanquelim">Sanquelim</option>
-                <option value="vasco">Vasco</option>
-                <option value="navelim">Navelim</option>
-                <option value="porvorim">Porvorim</option>
-                <option value="cujira">Cujira</option>
-                <option value="farmagudi">Farmagudi</option>
-            </select>
-            <select name="stream" id="">
-                <option value="" disabled selected>Stream</option>
-                <option value="arts">Arts</option>
-                <option value="commerce">Commerce</option>
-                <option value="science">Science</option>
-                <option value="vocational">Vocational</option>
-            </select>
-            <input type="submit"></input>
-        </form>
+   
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Goa Board HSSC Results</h2>
+                    <h4>Get Seat No. by Entering Name of Student</h3>
+                    
+        
+                </div>
+                <div class="card-body">
+                    <div class="container">
+            
+                        <div class=".display3"></div>
+                            <form id="demo" class="form" method="GET" action="/search" enctype="application/x-www-form-urlencoded">
+                                Enter Firstname or Lastname <br>
+                               
+                                <input type="text" name="query" class="form-control " placeholder="Name"> <br> 
+                                <select name="centre" class="form-control " id="">
+                                    <option value="" disabled selected>Centre</option>
+                                    <option value="bicholim">Bicholim</option>
+                                    <option value="canacona">Canacona</option>
+                                    <option value="cuncolim">Cuncolim</option>
+                                    <option value="curchorem">Curchorem</option>
+                                    <option value="mapusa">Mapusa</option>
+                                    <option value="margao">Margao</option>
+                                    <option value="panaji">Panaji</option>
+                                    <option value="harmal">Harmal</option>
+                                    <option value="pernem">Pernem</option>
+                                    <option value="pilar">Pilar</option>
+                                    <option value="ponda">Ponda</option>
+                                    <option value="sanquelim">Sanquelim</option>
+                                    <option value="vasco">Vasco</option>
+                                    <option value="navelim">Navelim</option>
+                                    <option value="porvorim">Porvorim</option>
+                                    <option value="cujira">Cujira</option>
+                                    <option value="farmagudi">Farmagudi</option>
+                                </select> <br>
+                                <select name="stream" class="form-control " id=""> <br> 
+                                    <option value="" disabled selected>Stream</option>
+                                    <option value="arts">Arts</option>
+                                    <option value="commerce">Commerce</option>
+                                    <option value="science">Science</option>
+                                    <option value="vocational">Vocational</option>
+                                </select> <br> <br>
+                                <input type="submit" class="btn btn-primary"></input>
+                            </form>
+                        </div>
+                </div>
+                <div class="card-footer ">
+                    <h5>Find your centre <a href="/guide">Click here</a></h4>
+                    <h7>Developed by <a href="https://linkedin.com/in/sawantkartik" target="_blank">Kartik Sawant</a></h3>
+                </div>
+              </div>
+
+        </div>
+        <div class="col-sm-3"></div>
     </div>
-    <h4>Find your centre <a href="/guide">Click here</a></h4>
-    <h3>Developed by <a href="https://linkedin.com/in/sawantkartik" target="_blank">Kartik Sawant</a></h3>
+
+
 </body>
+
 </html>
